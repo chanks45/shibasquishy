@@ -1,14 +1,18 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="id" style="background: transparent !important; background-color: rgba(0,0,0,0) !important;">
 <head>
-  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light">
   <title>Shiba Squishy | FiveM Vehicle HUD</title>
   <link rel="stylesheet" href="styles.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@500;600;700;800;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 </head>
-<body>
+<body style="background: transparent !important; background-color: rgba(0,0,0,0) !important;">
   <main id="cockpit" class="theme-orange" aria-label="Shiba Inu vehicle HUD">
+    <!-- MENU PENGATURAN TERLETAK TEPAT DI ATAS SPEEDOMETER -->
     <div id="settingsMenu">
       <div class="settings-heading">
         <span class="settings-dot"></span>
@@ -84,7 +88,7 @@
       </div>
     </div>
 
-
+    <!-- TAMPILAN SPEEDOMETER SHIBA INU -->
     <section class="shiba-wrap" aria-label="Chibi Shiba Inu speedometer">
       <div class="hud-topline"><span class="paw-dot"></span><span>SHIBA DRIVE</span><span id="engineStatus" class="engine-state">ENGINE OFF</span></div>
       <svg id="mechaAvatar" class="shiba-head" viewBox="0 0 420 370" role="button" tabindex="0" aria-label="Shiba Inu HUD. Klik untuk suara squeak" xmlns="http://www.w3.org/2000/svg">
@@ -93,7 +97,7 @@
           <linearGradient id="cream" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff8e9"/><stop offset="1" stop-color="#f5dfbf"/></linearGradient>
           <filter id="softShadow" x="-30%" y="-30%" width="160%" height="180%"><feDropShadow dx="0" dy="7" stdDeviation="5" flood-color="#6d3b20" flood-opacity=".18"/></filter>
         </defs>
-        <!-- ears double as turn indicators -->
+        <!-- Telinga (Indikator Sein) -->
         <g class="shiba-ears">
           <path class="ear ear-left" d="M93 128 Q58 101 63 31 Q66 13 83 28 L151 91 Q160 102 145 125Z" fill="url(#fur)" stroke="#9a5429" stroke-width="5" stroke-linejoin="round"/>
           <path class="ear-inner ear-inner-left" d="M91 93 Q77 74 78 47 L119 91Z" fill="#d96d68"/>
@@ -104,7 +108,7 @@
         <path d="M104 190 Q112 154 150 158 Q181 161 210 199 Q239 161 270 158 Q308 154 316 190 Q318 241 275 279 Q246 302 210 302 Q174 302 145 279 Q102 241 104 190Z" fill="url(#cream)"/>
         <path d="M104 185 Q128 163 158 183 Q176 194 183 214 Q148 208 132 228 Q113 217 104 185Z" fill="#fffaf0" opacity=".7"/>
         <path d="M316 185 Q292 163 262 183 Q244 194 237 214 Q272 208 288 228 Q307 217 316 185Z" fill="#fffaf0" opacity=".7"/>
-        <!-- left eye is digital speedometer -->
+        <!-- Mata Kiri: Spidometer Digital -->
         <g class="speed-eye">
           <ellipse cx="151" cy="174" rx="48" ry="42" fill="#fffdf7" stroke="#7b452a" stroke-width="4"/>
           <ellipse cx="151" cy="177" rx="39" ry="33" fill="#402b25"/>
@@ -113,7 +117,7 @@
           <path class="eye-shine" d="M128 155 Q136 146 144 153" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round"/>
           <path class="tear tear-left" d="M110 188 Q98 205 109 215 Q122 211 116 196Z" fill="#7edbff"/>
         </g>
-        <!-- right eye tachometer with circular arc -->
+        <!-- Mata Kanan: Tachometer RPM -->
         <g class="rpm-eye">
           <circle cx="269" cy="174" r="43" fill="#fffdf7" stroke="#7b452a" stroke-width="4"/>
           <circle cx="269" cy="174" r="34" fill="#402b25"/>
@@ -146,4 +150,5 @@
     </section>
   </main>
   <script src="script.js"></script>
-</body></html>
+</body>
+</html>
